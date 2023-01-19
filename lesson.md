@@ -7,6 +7,8 @@ Git - это одна из реализаций распределённых с�
 
 ## Создание коммитов
 
+The easiest way to create a Git commit with a message is to execute “git commit” with the “-m” option followed by your commit message. When using the Git CLI, note that you should restrict your commit message in order for it not to be wrapped.
+
 ### Git add
 Для добавления измений в коммит используется команда *git add*. Чтобы использовать команду *git add* напишите *git add <имя файла>*
 
