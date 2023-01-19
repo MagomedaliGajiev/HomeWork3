@@ -46,15 +46,15 @@ The easiest way to create a Git branch is to use the “git checkout” command 
 
 ## Работа с ссылками
 
-Ссылка — это косвенный указатель на коммит в Git, своего рода удобный псевдоним для хеша коммита. Это внутренний механизм представления веток и тегов в Git.
+If you were interested in seeing the history of your repository reachable from commit, say, 1a410e, you could run something like git log 1a410e to display that history, but you would still have to remember that 1a410e is the commit you want to use as the starting point for that history. Instead, it would be easier if you had a file in which you could store that SHA-1 value under a simple name so you could use that simple name rather than the raw SHA-1 value.
 
-Ссылки хранятся в виде обычных текстовых файлов в каталоге .git/refs, где файл .git обычно называется .git. Чтобы изучить ссылки в одном из репозиториев, перейдите в каталог .git/refs. Он должен иметь показанную ниже структуру, но файлы в ней будут отличаться в зависимости от того, какие ветки, теги и удаленные репозитории есть в вашем репозитории:
+In Git, these simple names are called “references” or “refs”; you can find the files that contain those SHA-1 values in the .git/refs directory. In the current project, this directory contains no files, but it does contain a simple structure:
 
- .git/refs/ heads/ main some-feature remotes/ origin/ main tags/ v0.9
-
- В каталоге heads определены все локальные ветки репозитория. Каждое имя файла совпадает с именем соответствующей ветки, а внутри файла хранится хеш коммита. Этот хеш указывает на конец ветки. Чтобы убедиться в этом, попробуйте выполнить следующие две команды из корневого каталога репозитория Git:
-
-  Вывод содержимого файла `refs/heads/main`: cat .git/refs/heads/main # Проверка коммита в конце ветки `main`: git log -1 main
+$ find .git/refs
+.git/refs
+.git/refs/heads
+.git/refs/tags
+$ find .git/refs -type f
 
   ## Цитаты
 
