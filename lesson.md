@@ -24,6 +24,8 @@ Git - это одна из реализаций распределённых с�
 
 ## Ветки в Git
 
+The easiest way to create a Git branch is to use the “git checkout” command with the “-b” option for a new branch. Next, you just have to specify the name for the branch you want to create. To achieve that, you will run the “git checkout” command with the “-b” option and add “feature” as the branch name.
+
 ### Создание ветки
 
 Для того, чтобы создать ветку, используется команда *git branch*. Делается это следующим образом в папке с репозиторием: *git branch <название новой ветки>*
